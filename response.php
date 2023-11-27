@@ -2,6 +2,7 @@
 $text = $_GET["textarea"];
 $badWord = $_GET["bad-word"];
 $textCensored = str_replace($badWord, '***', $text);
+$newTextLenght = strlen($textCensored)
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +16,7 @@ $textCensored = str_replace($badWord, '***', $text);
 </head>
 <body>
     <h1 class="text-center my-3 text-uppercase">Il tuo testo censurato:</h1>
-    <p class="text-center"><?php echo $textCensored ?></p>
+    <p class="text-center mb-3"><?php echo $textCensored ?></p>
+    <p class="text-center"> Il testo &egrave; lungo <?php echo $newTextLenght ?> parole</p>
 </body>
 </html>
